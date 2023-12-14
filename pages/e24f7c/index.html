@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>PreferenceScreen-Android Settings | Fireflies's blog</title><meta name="author" content="Fireflies"><meta name="copyright" content="Fireflies"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="什么是PreferenceScreenPreferenceScreen是一个包含设置控件的最顶层容器，如果要使用Android原生的设置控件，XML布局中的根标签必须是&lt;PreferenceScreen&gt;，并且XML布局必须放在res&#x2F;xml&#x2F;目录中[参考官网] 使用PreferenceScreen来布局设置页面，十分方便，基本上只需要配置好xml布局就行了，状态值">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PreferenceScreen-Android Settings">
+<meta property="og:url" content="http://example.com/pages/e24f7c/index.html">
+<meta property="og:site_name" content="Fireflies&#39;s blog">
+<meta property="og:description" content="什么是PreferenceScreenPreferenceScreen是一个包含设置控件的最顶层容器，如果要使用Android原生的设置控件，XML布局中的根标签必须是&lt;PreferenceScreen&gt;，并且XML布局必须放在res&#x2F;xml&#x2F;目录中[参考官网] 使用PreferenceScreen来布局设置页面，十分方便，基本上只需要配置好xml布局就行了，状态值">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/avatar.jpg">
+<meta property="article:published_time" content="2022-12-26T11:33:36.000Z">
+<meta property="article:modified_time" content="2023-12-14T05:53:01.065Z">
+<meta property="article:author" content="Fireflies">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/avatar.jpg"><link rel="shortcut icon" href="/img/ico.jpg"><link rel="canonical" href="http://example.com/pages/e24f7c/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'PreferenceScreen-Android Settings',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-12-14 05:53:01'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">65</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: linear-gradient(20deg, #0062be, #925696, #cc426e, #FF8F00)"><nav id="nav"><span id="blog-info"><a href="/" title="Fireflies's blog"><img class="site-icon" src="/img/avatar.jpg"/><span class="site-name">Fireflies's blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">PreferenceScreen-Android Settings</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-26T11:33:36.000Z" title="发表于 2022-12-26 11:33:36">2022-12-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-14T05:53:01.065Z" title="更新于 2023-12-14 05:53:01">2023-12-14</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="PreferenceScreen-Android Settings"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="什么是PreferenceScreen"><a href="#什么是PreferenceScreen" class="headerlink" title="什么是PreferenceScreen"></a>什么是PreferenceScreen</h2><p><a target="_blank" rel="noopener" href="https://developer.android.google.cn/reference/kotlin/androidx/preference/PreferenceScreen">PreferenceScreen</a>是一个包含设置控件的最顶层容器，如果要使用Android原生的设置控件，XML布局中的根标签必须是<code>&lt;PreferenceScreen&gt;</code>，并且XML布局必须放在res&#x2F;xml&#x2F;目录中[<a target="_blank" rel="noopener" href="https://developer.android.google.cn/develop/ui/views/components/settings#create_a_hierarchy">参考官网</a>]</p>
+<p><strong>使用PreferenceScreen来布局设置页面，十分方便，基本上只需要配置好xml布局就行了，状态值设置不需要开发者进行处理，各控件内部通过SharedPreferences来进行保存的，可以直接通过sp进行取值操作。</strong></p>
+<h2 id="相关控件"><a href="#相关控件" class="headerlink" title="相关控件"></a>相关控件</h2><p>官网有<a target="_blank" rel="noopener" href="https://developer.android.google.cn/develop/ui/views/components/settings/components-and-attributes#preference_components">各控件的说明</a>，这里列出常用的控件</p>
+<ul>
+<li>PreferenceFragmentCompat ——用于处理偏好设置的fragment，要使用原生设置控件需要自定义一个子类继承该类</li>
+<li>PreferenceScreen——包含设置控件的最顶层容器</li>
+<li>PreferenceCategory——用于对相似的选项进行分组的容器。显示类别标题，并以明显的布局将选项组分开。</li>
+<li>Preference——表示单个设置选项的基本构件。如果将Preference设置为persist，则它具有相应的键-值对，其中包含用户对设置的选择，可以在应用程序的其他地方访问该设置。</li>
+<li>EditTextPreference ——保存String值的选项。用户点击选项弹出一个对话框，对话框显示一个编辑框（用于用户修改选项值）</li>
+<li>SwitchPreferenceCompat——保存一个布尔值的选项。</li>
+</ul>
+<h2 id="控件属性值"><a href="#控件属性值" class="headerlink" title="控件属性值"></a>控件属性值</h2><p>官网有<a target="_blank" rel="noopener" href="https://developer.android.google.cn/develop/ui/views/components/settings/components-and-attributes#preference_attributes">详细说明</a></p>
+<ul>
+<li><p>title</p>
+<p>选项标题</p>
+</li>
+<li><p>summary</p>
+<p>选项的说明摘要</p>
+</li>
+<li><p>icon</p>
+<p>选项图标</p>
+</li>
+<li><p>key</p>
+<p>表示用于持久化存储选项值的key。可以通过key取到对应的选项控件，进行自定义操作。官方建议为层次结构中的每个Preference设置一个键。</p>
+</li>
+<li><p>enabled</p>
+<p>控制用户是否可以与选项交互的布尔值。当该值为false时，选项显示为灰色，用户无法与之交互。默认值为true。</p>
+</li>
+<li><p>selectable</p>
+<p>控制用户是否可以点击该选项，默认为true</p>
+</li>
+<li><p>isPreferenceVisible</p>
+<p>控制选项或选项组是否可见。等价于代码调用setVisible()。</p>
+</li>
+<li><p>defaultValue</p>
+<p>选项的默认值。值类型取决于选项类型</p>
+</li>
+<li><p>dependency</p>
+<p>此选项依赖的SwitchPreferenceCompat的key。当相应的开关关闭时，该选项将被禁用，并且不能被修改。</p>
+</li>
+</ul>
+<h2 id="获取设置选项存储的值"><a href="#获取设置选项存储的值" class="headerlink" title="获取设置选项存储的值"></a>获取设置选项存储的值</h2><p>默认情况下，选项值使用SharedPreferences进行保存的</p>
+<p>所以要获取选项设置的值，可以通过PreferenceManager.getDefaultSharedPreferences()获取到sp对象，然后通过sp去取值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);</span><br><span class="line">String name = sharedPreferences.getString(“signature”, &quot;&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>另外官方提供了<a target="_blank" rel="noopener" href="https://developer.android.google.cn/develop/ui/views/components/settings/use-saved-values#custom-data-store">自定义数据存储方式</a></p>
+<h2 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h2><p>xml页面如下，<code>root_preferences.xml</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">&lt;PreferenceScreen xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;PreferenceCategory app:title=&quot;设置分组1&quot;&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--    跳转到指定的fragment    --&gt;</span><br><span class="line">        &lt;Preference</span><br><span class="line">            app:fragment=&quot;com.omosoft.localtest.module.settings.SettingsActivity$ServiceFragment&quot;</span><br><span class="line">            app:key=&quot;goup1_key1&quot;</span><br><span class="line">            app:summary=&quot;跳转选项1设置页面&quot;</span><br><span class="line">            app:title=&quot;选项1&quot; /&gt;</span><br><span class="line"></span><br><span class="line">        &lt;Preference</span><br><span class="line">            app:key=&quot;group1_key2&quot;</span><br><span class="line">            app:selectable=&quot;false&quot;</span><br><span class="line">            app:summary=&quot;selectable=false&quot;</span><br><span class="line">            app:title=&quot;选项2&quot; /&gt;</span><br><span class="line">        &lt;Preference</span><br><span class="line">            app:enabled=&quot;false&quot;</span><br><span class="line">            app:key=&quot;group1_key3&quot;</span><br><span class="line">            app:summary=&quot;enabled=false&quot;</span><br><span class="line">            app:title=&quot;选项3&quot; /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/PreferenceCategory&gt;</span><br><span class="line"></span><br><span class="line">    &lt;PreferenceCategory</span><br><span class="line">        app:initialExpandedChildrenCount=&quot;6&quot;</span><br><span class="line">        app:title=&quot;设置分组2&quot;&gt;</span><br><span class="line"></span><br><span class="line">        &lt;SwitchPreferenceCompat</span><br><span class="line">            app:defaultValue=&quot;true&quot;</span><br><span class="line">            app:key=&quot;group2_switch&quot;</span><br><span class="line">            app:summary=&quot;SwitchPreferenceCompat&quot;</span><br><span class="line">            app:title=&quot;设置开关&quot; /&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--    通过dependency指定依赖的开关是选项1，只有选项1打开才能设置选项2    --&gt;</span><br><span class="line">        &lt;EditTextPreference</span><br><span class="line">            app:defaultValue=&quot;默认值&quot;</span><br><span class="line">            app:dependency=&quot;group2_switch&quot;</span><br><span class="line">            app:key=&quot;group2_name&quot;</span><br><span class="line">            app:useSimpleSummaryProvider=&quot;true&quot;</span><br><span class="line">            app:summary=&quot;EditTextPreference&quot;</span><br><span class="line">            app:title=&quot;姓名&quot; /&gt;</span><br><span class="line">        &lt;!--    单选列表    --&gt;</span><br><span class="line">        &lt;ListPreference</span><br><span class="line">            app:dependency=&quot;group2_switch&quot;</span><br><span class="line">            app:entries=&quot;@array/sex_entries&quot;</span><br><span class="line">            app:entryValues=&quot;@array/sex_values&quot;</span><br><span class="line">            app:key=&quot;group2_sex&quot;</span><br><span class="line">            app:useSimpleSummaryProvider=&quot;true&quot;</span><br><span class="line">            app:summary=&quot;性别&quot;</span><br><span class="line">            app:title=&quot;列表选项(单选)&quot; /&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--  多选列表     --&gt;</span><br><span class="line">        &lt;MultiSelectListPreference</span><br><span class="line">            app:dependency=&quot;group2_switch&quot;</span><br><span class="line">            app:entries=&quot;@array/hobby_entries&quot;</span><br><span class="line">            app:entryValues=&quot;@array/hobby_values&quot;</span><br><span class="line">            app:key=&quot;group2_hobby&quot;</span><br><span class="line">            app:summary=&quot;爱好&quot;</span><br><span class="line">            app:title=&quot;列表选项(多选)&quot; /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/PreferenceCategory&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;/PreferenceScreen&gt;</span><br></pre></td></tr></table></figure>
+
+<p>对应的SettingsFragment如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">public class SettingsActivity extends AppCompatActivity implements PreferenceFragmentCompat.OnPreferenceStartFragmentCallback &#123;</span><br><span class="line">    public static final String TAG = &quot;SettingsActivity&quot;;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.settings_activity);</span><br><span class="line">        if (savedInstanceState == null) &#123;</span><br><span class="line">            getSupportFragmentManager()</span><br><span class="line">                    .beginTransaction()</span><br><span class="line">                    .replace(R.id.settings, new SettingsFragment())</span><br><span class="line">                    .commit();</span><br><span class="line">        &#125;</span><br><span class="line">        ActionBar actionBar = getSupportActionBar();</span><br><span class="line">        if (actionBar != null) &#123;</span><br><span class="line">            actionBar.setDisplayHomeAsUpEnabled(true);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static class SettingsFragment extends PreferenceFragmentCompat &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) &#123;</span><br><span class="line">            Log.d(TAG, &quot;onCreatePreferences: &quot; + getClass());</span><br><span class="line">            //加载xml资源</span><br><span class="line">            setPreferencesFromResource(R.xml.root_preferences, rootKey);</span><br><span class="line"></span><br><span class="line">            //初始化选项，通过findPreference找到指定key的选项进行操作</span><br><span class="line">            EditTextPreference etPref = findPreference(&quot;group2_name&quot;);</span><br><span class="line">            if (etPref != null) &#123;</span><br><span class="line">                String text = etPref.getText();</span><br><span class="line">                Toast.makeText(getContext(), text, Toast.LENGTH_SHORT).show();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public static class ServiceFragment extends PreferenceFragmentCompat &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) &#123;</span><br><span class="line">            setPreferencesFromResource(R.xml.service_perferences, rootKey);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public boolean onPreferenceStartFragment(PreferenceFragmentCompat caller, Preference pref) &#123;</span><br><span class="line">        Log.d(TAG, &quot;onPreferenceStartFragment: caller = &quot; + caller.toString() + &quot;, pref = &quot; + pref.toString() + &quot;,&quot; + pref.getFragment());</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如下:</br><br><img src="/imgs/02_01_root_preferences.png" width="300" height="auto"/></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Fireflies</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/pages/e24f7c/">http://example.com/pages/e24f7c/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Fireflies's blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/pages/01cd0f/" title="白名单模式"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">白名单模式</div></div></a></div><div class="next-post pull-right"><a href="/pages/385f7b/" title="OemLockService"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">OemLockService</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Fireflies</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">65</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/FirefliesL"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFPreferenceScreen"><span class="toc-number">1.</span> <span class="toc-text">什么是PreferenceScreen</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E6%8E%A7%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">相关控件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E4%BB%B6%E5%B1%9E%E6%80%A7%E5%80%BC"><span class="toc-number">3.</span> <span class="toc-text">控件属性值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E8%AE%BE%E7%BD%AE%E9%80%89%E9%A1%B9%E5%AD%98%E5%82%A8%E7%9A%84%E5%80%BC"><span class="toc-number">4.</span> <span class="toc-text">获取设置选项存储的值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#demo"><span class="toc-number">5.</span> <span class="toc-text">demo</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/13/android_fw/00.init/" title="init进程">init进程</a><time datetime="2023-11-13T14:42:26.000Z" title="发表于 2023-11-13 14:42:26">2023-11-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/02/android_fw/112.ART/" title="ART学习笔记">ART学习笔记</a><time datetime="2023-11-02T11:23:14.000Z" title="发表于 2023-11-02 11:23:14">2023-11-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/01/android_fw/111.loadLibrary/" title="关于loadlibrary">关于loadlibrary</a><time datetime="2023-11-01T14:02:44.000Z" title="发表于 2023-11-01 14:02:44">2023-11-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/10/27/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/2.Ubuntu%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80/" title="Ubuntu微信图片无法打卡">Ubuntu微信图片无法打卡</a><time datetime="2023-10-27T14:39:36.000Z" title="发表于 2023-10-27 14:39:36">2023-10-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/10/23/android_fw/110.HIDL/" title="HIDL">HIDL</a><time datetime="2023-10-23T14:55:56.000Z" title="发表于 2023-10-23 14:55:56">2023-10-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 By Fireflies</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

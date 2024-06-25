@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Fireflies's blog</title><meta name="author" content="Fireflies"><meta name="copyright" content="Fireflies"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Fireflies&#39;s blog">
+<meta property="og:url" content="http://example.com/page/3/index.html">
+<meta property="og:site_name" content="Fireflies&#39;s blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/avatar.jpg">
+<meta property="article:author" content="Fireflies">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/avatar.jpg"><link rel="shortcut icon" href="/img/ico.jpg"><link rel="canonical" href="http://example.com/page/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Fireflies\'s blog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-06-25 07:12:18'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">74</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/NorthSeaStairs.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Fireflies's blog"><img class="site-icon" src="/img/avatar.jpg"/><span class="site-name">Fireflies's blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Fireflies's blog</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/pages/2db764/" title="TaskSnapshotController">TaskSnapshotController</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-09T16:50:01.000Z" title="发表于 2023-08-09 16:50:01">2023-08-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">TaskSnapshotController的简介在AOSP源码中有相关的说明：
+12345678910111213/** * When an app token becomes invisible, we take a snapshot (bitmap) of the corresponding task and * put it into our cache. Internally we use gralloc buffers to be able to draw them wherever we * like without any copying. * &lt;p&gt; * System applications may retrieve a snapshot to represent the current state of a task, and draw * them in their own process. * &lt;p&gt; * When we task becomes visible again, we show a starting window with ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/pages/762af4/" title="PackageInstaller">PackageInstaller</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-07T10:45:09.000Z" title="发表于 2023-08-07 10:45:09">2023-08-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">应用层安装apk，调用PackageInstaller的commit。
+app端主要逻辑是通过PackageInstaller创建一个Session，然后openSession，通过session拿到输出流，将apk文件写入到session，最后进行commit。
+在framework中的安装流程，主要从Session开始，客户端的session对应framework中的服务端PackageInstallerSession来看看PackageInstallerSession的commit
+123456789101112131415161718192021222324252627282930313233343536@Overridepublic void commit(@NonNull IntentSender statusReceiver, boolean forTransfer) &#123;    if (hasParentSessionId()) &#123;        throw new IllegalStateException(                &quot ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/pages/a7afb0/" title="Service">Service</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-03T14:35:56.000Z" title="发表于 2023-08-03 14:35:56">2023-08-03</time></span></div><div class="content">bindService流程ContextImpl.java
+123456789101112131415161718192021222324252627282930313233@Overridepublic boolean bindService(Intent service, ServiceConnection conn, int flags) &#123;    warnIfCallingFromSystemProcess();    return bindServiceCommon(service, conn, flags, null, mMainThread.getHandler(), null,            getUser());&#125;private boolean bindServiceCommon(Intent service, ServiceConnection conn, int flags,        String instanceName, Handler handler, Executor executor, UserHandle user)  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/pages/281417/" title="PMS">PMS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-03T10:48:47.000Z" title="发表于 2023-08-03 10:48:47">2023-08-03</time></span></div><div class="content">PKMS的启动流程PKMS的启动在SystemServer的startBootstrapServices中SystemServer.java
+12345678910111213141516171819202122private void startBootstrapServices(@NonNull TimingsTraceAndSlog t) &#123;    //......    t.traceBegin(&quot;StartPackageManagerService&quot;);    try &#123;        Watchdog.getInstance().pauseWatchingCurrentThread(&quot;packagemanagermain&quot;);        //初始化PMS        mPackageManagerService = PackageManagerService.main(mSystemContext, installer,                mFactoryTestMode != FactoryTe ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/pages/9a0c04/" title="windowSoftInputMode">windowSoftInputMode</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-25T10:52:12.000Z" title="发表于 2023-07-25 10:52:12">2023-07-25</time></span></div><div class="content">window的显示在DisplayPolicy中，有一个layoutWindowLw方法，这个方法中会计算window的位置，计算出WindowState中各种条件下的显示区域：
+
+Rect pf &#x3D; windowFrames.mParentFrame   通常表示整个屏幕的区域，即整个屏幕的大小。但可能需要将其名称与mDisplayFrame互换，以提高代码的清晰性。
+Rect df &#x3D; windowFrames.mDisplayFrame  表示ActivityStack中的窗口所在的整个屏幕区域。通常与设备的屏幕区域相等。
+Rect cf &#x3D; windowFrames.mContentFrame  当IME（如键盘）未显示时，等于mDecorFrame。当IME显示时，等于mDecorFrame减去IME占用的区域。
+Rect vf &#x3D; windowFrames.mVisibleFrame  用于处理一些旧版应用程序的IME（输入法）显示提示文本的情况。即用于处理兼容旧版应用的情况。
+Rect dcf &#x3D; windowFrames ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/pages/0b0586/" title="IMMS">IMMS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-12T13:31:15.000Z" title="发表于 2023-07-12 13:31:15">2023-07-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">输入法基本框架输入法框架整体分为三个部分:
+
+输入法管理端 IMMS  
+ 主要指 InputMethodManagerService
+
+输入法服务端 IMS
+ InputMethodService
+
+输入法客户端 IMM
+ InputMethodManager
+
+
+输入法初始化过程输入法客户端初始化（IMM）每个app都有一个IMM实例, 并且在应用内是单例存在. 当app需要输入法时操作IMM来请求IMMS进行输入法操作; 当IMMS需要通知app时, 则通过IMM告知app下一步操作.
+输入法的初始话从添加window开始的, 每次添加window时会实例化 ViewRootImpl, ViewRootImpl 在获取 IWindowSession时会检查输入法是否已经初始化.
+回顾一下Activty的启动流程
+123456789101112ActivityThread.handleLaunchActivity    ActivityThread.performLaunchActivity        Activity.attach() 方法内部创建PhoneWindowAct ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/pages/c10468/" title="分屏">分屏</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-20T11:30:10.000Z" title="发表于 2023-06-20 11:30:10">2023-06-20</time></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/pages/cf392f/" title="EditText">EditText</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-13T10:23:57.000Z" title="发表于 2023-06-13 10:23:57">2023-06-13</time></span></div><div class="content">https://github.com/itgoyo/AndroidSource-Analysis/blob/master/chapter1/TextView%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90.md
+EditText继承自TextViewTextView中有一些辅助类
+
+一个Editor对象                mEditor  TextView作为可编辑文本控件的时候(EditText)，使用Editor来处理文本的区域选择处理和判断、拼写检查、弹出文本菜单等。
+一个Layout对象                mLayout  TextView的文字排版、折行策略以及文本绘制都是在Layout里面完成的，TextView的自身测量也受Layout的影响。Layout是TextView执行setText方法后，由TextView内部创建的实例，并不能由外部提供。可以用getLayout()方法获取。
+一个TransformationMethod对象  mTransformation  用来处理最终的显示结果的类，例如显示密码的时候把密码 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/pages/4b117f/" title="Toast">Toast</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-31T10:22:42.000Z" title="发表于 2023-05-31 10:22:42">2023-05-31</time></span></div><div class="content">Toast流程常用Toast.makeText(this, &quot;test&quot;, Toast.LENGTH_SHORT).show();主要就看makeText和show方法
+makeTextmakeText实际会去构造一个内部类TN对象，TN内部持有一个ToastPresenter对象
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374public static Toast makeText(@NonNull Context context, @Nullable Looper looper,        @NonNull CharSequence text, @Duration int duration) &#123;    //android Q之后的    if (Compatibility.isChangeEnabled(CHANGE_T ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/pages/614bde/" title="Insets相关">Insets相关</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-30T15:18:02.000Z" title="发表于 2023-05-30 15:18:02">2023-05-30</time></span></div><div class="content">简单概念在aosp中，顶部的状态栏，底部的导航栏都是被抽象成了一个Insets，Insets是一个序列化的实体类,可以类比Rect:
+123456789101112131415public final class Insets implements Parcelable &#123;    public static final @NonNull Insets NONE = new Insets(0, 0, 0, 0);    public final int left;    public final int top;    public final int right;    public final int bottom;    private Insets(int left, int top, int right, int bottom) &#123;        this.left = left;        this.top = top;        this.right = right;        this.bottom = bottom;    &#125;& ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#content-inner">8</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Fireflies</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">74</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/FirefliesL"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/25/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/7.AIDL-C++%E4%B8%AD%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96/" title="在C++中AIDL序列化对象">在C++中AIDL序列化对象</a><time datetime="2024-06-25T15:00:05.000Z" title="发表于 2024-06-25 15:00:05">2024-06-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/14/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/6.window%E5%B1%82%E7%BA%A7%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" title="窗口层级问题记录">窗口层级问题记录</a><time datetime="2024-06-14T17:18:56.000Z" title="发表于 2024-06-14 17:18:56">2024-06-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/13/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/5.Android%E5%B9%BF%E6%92%AD%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" title="Android广播问题记录">Android广播问题记录</a><time datetime="2024-06-13T17:42:42.000Z" title="发表于 2024-06-13 17:42:42">2024-06-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/24/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/4.UnsatisfiedLinkError%E8%AE%B0%E5%BD%95/" title="4.UnsatisfiedLinkError记录.md">4.UnsatisfiedLinkError记录.md</a><time datetime="2024-05-24T15:04:25.000Z" title="发表于 2024-05-24 15:04:25">2024-05-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/21/%E5%85%B6%E5%AE%83/07.Makefile/" title="framework中一些通用逻辑">framework中一些通用逻辑</a><time datetime="2024-05-21T11:25:38.000Z" title="发表于 2024-05-21 11:25:38">2024-05-21</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">学习笔记</span><span class="card-category-list-count">17</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Android-Framework/" style="font-size: 1.1em; color: #999">Android Framework</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">五月 2024</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">74</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-06-25T07:12:17.667Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By Fireflies</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
